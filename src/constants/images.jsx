@@ -48,7 +48,7 @@ import evento6 from "../assets/img/EVENTOS/Eventos-06.jpg";
 import evento7 from "../assets/img/EVENTOS/Eventos-07.jpg";
 
 /* FOTOPERIODISMO */
-import fotoperiodismo1 from "../assets/img/FOTOPERIODISMO/Fotoperiodismo-01.jpg";
+//import fotoperiodismo1 from "../assets/img/FOTOPERIODISMO/Fotoperiodismo-01.jpg";
 import fotoperiodismo2 from "../assets/img/FOTOPERIODISMO/Fotoperiodismo-02.jpg";
 import fotoperiodismo3 from "../assets/img/FOTOPERIODISMO/Fotoperiodismo-03.jpg";
 import fotoperiodismo4 from "../assets/img/FOTOPERIODISMO/Fotoperiodismo-04.jpg";
