@@ -49,11 +49,11 @@ import evento7 from "../assets/img/EVENTOS/Eventos-07.jpg";
 
 /* FOTOPERIODISMO */
 //import fotoperiodismo1 from "../assets/img/FOTOPERIODISMO/Fotoperiodismo-01.jpg";
-import fotoperiodismo2 from "../assets/img/FOTOPERIODISMO/Fotoperiodismo-02.jpg";
-import fotoperiodismo3 from "../assets/img/FOTOPERIODISMO/Fotoperiodismo-03.jpg";
-import fotoperiodismo4 from "../assets/img/FOTOPERIODISMO/Fotoperiodismo-04.jpg";
-import fotoperiodismo5 from "../assets/img/FOTOPERIODISMO/Fotoperiodismo-05.jpg";
-import fotoperiodismo6 from "../assets/img/FOTOPERIODISMO/Fotoperiodismo-06.jpg";
+//import fotoperiodismo2 from "../assets/img/FOTOPERIODISMO/Fotoperiodismo-02.jpg";
+//import fotoperiodismo3 from "../assets/img/FOTOPERIODISMO/Fotoperiodismo-03.jpg";
+//import fotoperiodismo4 from "../assets/img/FOTOPERIODISMO/Fotoperiodismo-04.jpg";
+//import fotoperiodismo5 from "../assets/img/FOTOPERIODISMO/Fotoperiodismo-05.jpg";
+//import fotoperiodismo6 from "../assets/img/FOTOPERIODISMO/Fotoperiodismo-06.jpg";
 
 /* MODA */
 import moda1 from "../assets/img/MODA/Moda-01.jpg";
