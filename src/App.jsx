@@ -1,6 +1,7 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./App.css";
 import HomePage from "./pages/HomePage";
+import WhatsappFixedIcon from "./components/WhatsappFixedIcon";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
           </Routes>
         </Router>
-      </div>
+        <WhatsappFixedIcon/>     </div>
     </div>
   );
 }

@@ -64,7 +64,7 @@ const NavItem = ({ item }) => {
                 <Link
                   key={index}
                   to={page.href}
-                  className="bg-primary text-white hover:text-white hover:bg-primary-subtle px-4 py-2 "
+                  className="bg-primary text-white hover:text-white hover:bg-primary-hover px-4 py-2"
                 >
                   {page.title}
                 </Link>
@@ -87,7 +87,7 @@ const Header = () => {
   return (
     <section className="sticky top-0 left-0 right-0 z-50 bg-black p-normalize">
       <img src={imgBooks.Book1} alt="" />
-      <header className="container mx-auto flex justify-between py-4 items-center">
+      <header className="mx-auto flex justify-between py-4 items-center">
         <Link to={"/"}>
           <img src={images.logo} alt="" className="h-5" />
         </Link>

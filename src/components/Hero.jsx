@@ -3,6 +3,17 @@ import { imgDesfiles } from "../constants/images";
 import { FaWhatsapp } from "react-icons/fa";
 
 const Hero = () => {
+  const textoPredefinido =
+    "Hola Darío, me gustaría saber más sobre tus servicios";
+
+  const abrirWhatsapp = () => {
+    const numeroTelefono = "+549351573-9982"; // Reemplaza con el número de teléfono al que deseas enviar el mensaje
+    const url = `https://api.whatsapp.com/send?phone=${numeroTelefono}&text=${encodeURIComponent(
+      textoPredefinido
+    )}`;
+    window.open(url, "_blank");
+  };
+
   return (
     <section className="text-white overflow-hidden mx-auto w-full h-[70vh] md:h-[75vh]  lg:h-[80vh] flex flex-col py-5 lg:flex-row relative">
       <div className="flex gap-2 mx-auto p-normalize flex-col justify-center w-full h-full z-30 items-center md:items-start">
@@ -17,7 +28,10 @@ const Hero = () => {
             Capturo experiencias visuales extraordinarias
           </p>
         </div>
-        <button className="bg-primary flex gap-2 items-center px-5 py-2 rounded-xl font-body text-md md:text-base">
+        <button
+          onClick={abrirWhatsapp}
+          className="bg-primary hover:bg-primary-hover transition-colors duration-200 flex gap-2 items-center px-5 py-2 rounded-xl font-body text-md md:text-base"
+        >
           <FaWhatsapp />
           Contactame
         </button>

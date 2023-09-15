@@ -7,6 +7,7 @@ export default {
         primary: {
           DEFAULT: "#672130",
           subtle: "#B0455B",
+          hover: "#570F1D",
         },
         black: {
           DEFAULT: "#191D20",
