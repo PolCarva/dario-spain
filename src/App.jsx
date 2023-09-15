@@ -6,7 +6,7 @@ import WhatsappFixedIcon from "./components/WhatsappFixedIcon";
 function App() {
   return (
     <div className="bg-black">
-      <div className="mx-auto max-w-screen-2xl">
+      <div className="mx-auto ">
         <Router>
           <Routes>
             <Route path="/" element={<HomePage />} />

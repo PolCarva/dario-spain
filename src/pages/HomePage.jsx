@@ -1,13 +1,14 @@
 import React from "react";
 import MainLayout from "../components/MainLayout";
 import Hero from "../components/Hero";
-import CardScroller from "../components/CardScroller";
+import CardSwiper from "../components/CardSwiper";
 
 const HomePage = () => {
+  
   return (
     <MainLayout>
       <Hero />
-      <CardScroller />
+      <CardSwiper />
     </MainLayout>
   );
 };

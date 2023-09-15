@@ -7,7 +7,7 @@ const Hero = () => {
     "Hola Darío, me gustaría saber más sobre tus servicios";
 
   const abrirWhatsapp = () => {
-    const numeroTelefono = "+549351573-9982"; // Reemplaza con el número de teléfono al que deseas enviar el mensaje
+    const numeroTelefono = "+549351573-9982";
     const url = `https://api.whatsapp.com/send?phone=${numeroTelefono}&text=${encodeURIComponent(
       textoPredefinido
     )}`;
@@ -15,7 +15,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="text-white overflow-hidden mx-auto w-full h-[70vh] md:h-[75vh]  lg:h-[80vh] flex flex-col py-5 lg:flex-row relative">
+    <section className="text-white overflow-hidden mx-auto w-full h-[60vh] md:h-[40vh]  lg:h-[80vh] flex flex-col py-5 lg:flex-row relative">
       <div className="flex gap-2 mx-auto p-normalize flex-col justify-center w-full h-full z-30 items-center md:items-start">
         <span className="text-xl font-body text-center md:text-start">
           Hola, soy
