@@ -21,10 +21,10 @@ const Hero = () => {
           Hola, soy
         </span>
         <div className="text-center md:text-start">
-          <h1 className="font-logo font-black text-5xl md:text-6xl lg:text-7xl">
+          <h1 className="font-logo font-black text-5xl md:text-6xl lg:text-7xl mb-2">
             DARIO SPAIN
           </h1>
-          <p className="font-body italic">
+          <p className="font-body italic my-2">
             Capturo experiencias visuales extraordinarias
           </p>
         </div>

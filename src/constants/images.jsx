@@ -1,5 +1,9 @@
 import logo from "../assets/img/logo.svg";
 
+/* CLIENTES */
+import cliente1 from "../assets/img/Clientes/Cliente1.png"
+import cliente2 from "../assets/img/Clientes/Cliente2.png"
+
 /* BOOKS */
 import book1 from "../assets/img/BOOKS/Book-01.jpg";
 import book2 from "../assets/img/BOOKS/Book-02.jpg";
@@ -69,6 +73,8 @@ import moda10 from "../assets/img/MODA/Moda-10.jpg";
 
 export const images = {
   logo,
+  cliente1,
+  cliente2,
 };
 
 export const imgBooks = {
@@ -143,3 +149,5 @@ export const imgModa = {
   moda9,
   moda10,
 };
+
+export const imgClientes = {}
