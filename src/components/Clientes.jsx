@@ -19,6 +19,14 @@ const Clientes = () => {
           }
           img={images.cliente1}
         />
+        <ClientCard
+          title={"Pandora Beauty"}
+          by={"Pandora Beauty by Vanesa Araoz"}
+          desc={
+            "Servicios de Maquillaje profesional, Peluquería y Estilismo de Moda. Realización de producciones de moda."
+          }
+          img={images.cliente2}
+        />
       </div>
     </section>
   );
