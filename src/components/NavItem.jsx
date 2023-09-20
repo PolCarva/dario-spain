@@ -48,7 +48,7 @@ const NavItem = ({ item, closeNav }) => {
             spy={true}
             smooth={true}
             offset={-70}
-            duration={500}
+            duration={800}
             className={`relative text-white flex cursor-pointer items-center gap-2 px-4 transition-all duration-500 ${
               isActive ? "active" : ""
             }`}

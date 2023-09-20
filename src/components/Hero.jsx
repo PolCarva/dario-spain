@@ -15,7 +15,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="text-white overflow-hidden mx-auto w-full h-[60vh] md:h-[40vh]  lg:h-[80vh] flex flex-col py-5 lg:flex-row relative">
+    <section id="hero" className="text-white overflow-hidden mx-auto w-full h-[60vh] md:h-[40vh]  lg:h-[80vh] flex flex-col py-5 lg:flex-row relative">
       <div className="flex gap-2 mx-auto p-normalize flex-col justify-center w-full h-full z-30 items-center md:items-start">
         <span className="text-xl font-body text-center md:text-start">
           Hola, soy

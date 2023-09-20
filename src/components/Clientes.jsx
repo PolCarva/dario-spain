@@ -4,7 +4,7 @@ import { images } from "../constants/images";
 
 const Clientes = () => {
   return (
-    <section className="p-normalize mt-10">
+    <section className="p-normalize mt-10 pb-10">
       <div className="flex flex-col gap-5">
         <h2 className="text-2xl font-bold text-center">
           Nuestros clientes destacados
