@@ -6,10 +6,10 @@ import { images, imgBooks } from "../constants/images";
 import NavItem from "./NavItem";
 
 const navItemsInfo = [
-  { name: "Inicio", type: "navLink", href: "/" },
-  { name: "Portafolio", type: "link", href: "/portafolio" },
+  { name: "Inicio", type: "navLink", href: "hero" },
+  { name: "Portfolio", type: "link", href: "/portfolio" },
   { name: "Acerca de mi", type: "navLink", href: "about" },
-  { name: "Contacto", type: "navLink", href: "contacto" },
+  { name: "Contacto", type: "navLink", href: "contact" },
   {
     name: "ES",
     type: "dropdown",

@@ -11,7 +11,7 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/portafolio" element={<PortfolioPage />} />
+            <Route path="/portfolio" element={<PortfolioPage />} />
           </Routes>
         </Router>
         <WhatsappFixedIcon/>     </div>

@@ -15,6 +15,7 @@ const HomePage = () => {
       scroller.scrollTo(sectionToScroll, {
         duration: 800,
         delay: 100,
+        offset: -70,
         smooth: "ease",
       });
       localStorage.removeItem("scrollToSection");
