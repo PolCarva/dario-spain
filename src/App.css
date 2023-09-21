@@ -15,6 +15,20 @@
 .swiper-button-next::after {
     transform: translateX(-1rem);
 }
+
 .swiper-button-prev::after {
     transform: translateX(1rem);
+}
+
+NavLink.active span {
+    transform: scaleX(1);
+}
+
+span {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Estilo cuando la clase active está presente */
+.active span {
+    transform: scaleX(1);
 }

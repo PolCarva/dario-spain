@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Link as NavLink } from "react-scroll";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { Link, useLocation } from "react-router-dom";
@@ -6,8 +6,8 @@ import { Link, useLocation } from "react-router-dom";
 const NavItem = ({ item, closeNav }) => {
   const [dropdown, setDropdown] = useState(false);
   const location = useLocation();
+  const navLinkRef = useRef(null);
 
-  const isActive = item.href && location.pathname === item.href;
   const isPortfolio = location.pathname === "/portfolio";
 
   const toggleDropdownHandler = () => {
@@ -29,36 +29,30 @@ const NavItem = ({ item, closeNav }) => {
           <Link
             to="/"
             onClick={handleNavLinkClick}
-            className={`relative text-white flex cursor-pointer items-center gap-2 px-4 transition-all duration-500 ${
-              isActive ? "active" : ""
-            }`}
+            className={`relative text-white flex cursor-pointer items-center gap-2 px-4 transition-all duration-500 `}
           >
             {item.icon}
             {item.name}
             <span
-              className={`absolute inset-x-0 -bottom-1 h-[0.9px] bg-white transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100 ${
-                isActive && "scale-x-100"
-              }`}
+              className={`absolute inset-x-0 -bottom-1 h-[0.9px] bg-white transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100`}
             ></span>
           </Link>
         ) : (
           <NavLink
+            ref={navLinkRef}
+            activeClass="active"
             onClick={closeNav}
             to={item.href}
             spy={true}
             smooth={true}
             offset={-70}
             duration={800}
-            className={`relative text-white flex cursor-pointer items-center gap-2 px-4 transition-all duration-500 ${
-              isActive ? "active" : ""
-            }`}
+            className={`relative text-white flex cursor-pointer items-center gap-2 px-4 transition-all duration-500`}
           >
             {item.icon}
             {item.name}
             <span
-              className={`absolute inset-x-0 -bottom-1 h-[0.9px] bg-white transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100 ${
-                isActive && "scale-x-100"
-              }`}
+              className={`absolute inset-x-0 -bottom-1 h-[0.9px] bg-white transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100`}
             ></span>
           </NavLink>
         )
@@ -66,15 +60,13 @@ const NavItem = ({ item, closeNav }) => {
         <Link
           onClick={closeNav}
           to={item.href}
-          className={`relative text-white flex items-center gap-2 px-4 transition-all duration-500 ${
-            isActive ? "active" : ""
-          }`}
+          className={`relative text-white flex items-center gap-2 px-4 transition-all duration-500`}
         >
           {item.icon}
           {item.name}
           <span
             className={`absolute inset-x-0 -bottom-1 h-[0.9px] bg-white transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100 ${
-              isActive && "scale-x-100"
+              isPortfolio && "scale-x-100"
             }`}
           ></span>
         </Link>
