@@ -1,8 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CardComponent = ({ title, icon, img }) => {
   return (
-    <div
+    <Link
+      to={`/portfolio/${title.toLowerCase()}`}
       style={{
         backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent), url(${img})`,
       }}
@@ -12,7 +14,7 @@ const CardComponent = ({ title, icon, img }) => {
         {icon}
       </div>
       <h5 className="text-white mt-2 text-xl font-body font-medium">{title}</h5>
-    </div>
+    </Link>
   );
 };
 

@@ -12,6 +12,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/portfolio" element={<PortfolioPage />} />
+            <Route path="/portfolio/:category" element={<PortfolioPage />} />
           </Routes>
         </Router>
         <WhatsappFixedIcon/>     </div>

@@ -8,7 +8,7 @@ const NavItem = ({ item, closeNav }) => {
   const location = useLocation();
   const navLinkRef = useRef(null);
 
-  const isPortfolio = location.pathname === "/portfolio";
+  const isPortfolio = location.pathname.includes("/portfolio");
 
   const toggleDropdownHandler = () => {
     setDropdown((curState) => !curState);
