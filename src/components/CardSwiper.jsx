@@ -21,7 +21,7 @@ import {
 
 const CardSwiper = () => {
   return (
-    <section className="bg-white">
+    <section className="bg-white" id="portfolio">
       <h2 className="py-5 text-center w-full px-2 font-bold font-body lg:text-2xl md:text-xl text-lg">¿Qué servicios de fotografías puedes contratar?</h2>
       <div className="py-5 h-[50vh] md:h-[40vh] lg:h-[75vh]">
         <Swiper
@@ -48,6 +48,7 @@ const CardSwiper = () => {
           <SwiperSlide className="h-4/5 flex mb-16">
             <CardComponent
               title="Desfiles"
+              id="desfiles"
               img={imgDesfiles.desfile1}
               icon={<GiHighHeel className="w-full h-full p-1" />}
             />
@@ -55,6 +56,7 @@ const CardSwiper = () => {
           <SwiperSlide className="h-4/5 mt-16">
             <CardComponent
               title="Conciertos"
+              id="conciertos"
               img={imgConciertos.concierto1}
               icon={<FaMusic className="w-full h-full p-2" />}
             />
@@ -62,6 +64,7 @@ const CardSwiper = () => {
           <SwiperSlide className="h-4/5 mb-16">
             <CardComponent
               title="Moda"
+              id="moda"
               img={imgModa.moda1}
               icon={<GiAmpleDress className="w-full h-full p-1" />}
             />
@@ -69,6 +72,7 @@ const CardSwiper = () => {
           <SwiperSlide className="h-4/5 mt-16">
             <CardComponent
               title="Fotoperiodismo"
+              id="fotoperiodismo"
               img={imgFotoperiodismo.fotoperiodismo1}
               icon={<BsCameraReelsFill className="w-full h-full p-2" />}
             />
@@ -76,6 +80,7 @@ const CardSwiper = () => {
           <SwiperSlide className="h-4/5 ">
             <CardComponent
               title="Eventos"
+              id="eventos"
               img={imgEventos.evento1}
               icon={<BiSolidDrink className="w-full h-full p-2" />}
             />
@@ -83,6 +88,7 @@ const CardSwiper = () => {
           <SwiperSlide className="h-4/5 mt-16">
             <CardComponent
               title="Book's"
+              id="books"
               img={imgBooks.book1}
               icon={<LiaAddressBookSolid className="w-full h-full p-1" />}
             />

@@ -4,8 +4,8 @@ export const AboutMeSection = () => {
   return (
     <section className="p-normalize pt-5" id="about">
       <div className="font-body flex flex-col gap-4 w-full md:w-2/3">
-        <h2 className="text-2xl font-bold">Acerca de mí</h2>
-        <h4 className="font-semibold">¿Cómo están? Les cuento un poco sobre quien soy</h4>
+        <h2 className="text-4xl font-bold">Acerca de mí</h2>
+        <h4 className="font-semibold text-xl">¿Cómo están? Les cuento un poco sobre quien soy</h4>
         <p>
           Durante 10 años, me desempeñé como locutor y periodista en Córdoba,
           Argentina. Durante ese tiempo, realicé trabajos como columnista

@@ -7,7 +7,7 @@ import NavItem from "./NavItem";
 
 const navItemsInfo = [
   { name: "Inicio", type: "navLink", href: "hero" },
-  { name: "Portfolio", type: "link", href: "/portfolio" },
+  { name: "Portfolio", type: "navLink", href: "portfolio" },
   { name: "Acerca de mi", type: "navLink", href: "about" },
   { name: "Contacto", type: "navLink", href: "contact" },
   {

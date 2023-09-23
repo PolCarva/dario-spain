@@ -1,17 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
-const categoryGridStyles = {
-  books: "repeat(2, 1fr)",
-  clientes: "repeat(3, 1fr)",
-  conciertos: "repeat(2, 1fr)",
-  desfiles: "repeat(3, 1fr)",
-  eventos: "repeat(3, 1fr)",
-  fotoperiodismo: "repeat(3, 1fr)",
-  moda: "repeat(3, 1fr)",
-  default: "repeat(3, 1fr)",
-};
-
 const PhotoGrid = ({ images }) => {
   const location = useLocation();
   const [category, setCategory] = useState("default");
@@ -23,22 +12,45 @@ const PhotoGrid = ({ images }) => {
     setCategory(ultimoParametro);
   }, [location.pathname]);
 
-  const gridStyle = {
-    gridTemplateColumns: categoryGridStyles[category] || categoryGridStyles.default,
+  const LAYOUTS = {
+    default: [2, 2, 2, 3, 3, 2, 2, 2, 3, 3],
+    desfiles: [2, 2, 2, 3, 3, 2, 2, 2, 3, 3],
+    moda: [2, 2, 2, 3, 3, 2, 2, 2, 4, 2],
+    fotoperiodismo: [2, 2, 2, 3, 3, 6],
+    eventos: [3, 3, 3, 3, 3, 3, 6],
+    conciertos: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+    books: [2, 2, 2, 3, 3, 2, 2, 2, 3, 3, 4, 2],
   };
 
+  const layout = LAYOUTS[category] || LAYOUTS.default;
+
   return (
-    <div className="grid grid-cols-6 gap-4 grid-rows-6" style={gridStyle}>
-      {Object.keys(images).map((key) => (
-        <img
-          key={key}
-          src={images[key]}
-          alt={`Book ${key}`}
-          className="w-full h-full max-h-[550px] object-cover"
-        />
-      ))}
+    <div className="grid grid-cols-6 gap-4">
+      {Object.keys(images).map((key, index) => {
+        const colSpan = layout[index];
+        return (
+          <img
+            loading="lazy"
+            key={key}
+            src={images[key]}
+            alt={`foto ${category}: ${key}`}
+            className={`w-full h-full max-h-[550px] object-cover col-span-${colSpan}`}
+          />
+        );
+      })}
     </div>
   );
 };
 
 export default PhotoGrid;
+
+/* const categoryGridStyles = {
+  books: ["repeat(3, 1fr)", "repeat(2, 1fr)", "repeat(3, 1fr)", "repeat(2, 1fr)"],
+  clientes: "repeat(3, 1fr)",
+  conciertos: "repeat(2, 1fr)",
+  desfiles: "repeat(3, 1fr)",
+  eventos: "repeat(3, 1fr)",
+  fotoperiodismo: "repeat(3, 1fr)",
+  moda: "repeat(3, 1fr)",
+  default: "repeat(3, 1fr)",
+}; */

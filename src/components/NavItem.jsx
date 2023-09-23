@@ -29,7 +29,7 @@ const NavItem = ({ item, closeNav }) => {
           <Link
             to="/"
             onClick={handleNavLinkClick}
-            className={`relative text-white flex cursor-pointer items-center gap-2 px-4 transition-all duration-500 `}
+            className={`relative text-white flex cursor-pointer items-center gap-2 px-4 transition-all duration-500`}
           >
             {item.icon}
             {item.name}

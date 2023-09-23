@@ -11,6 +11,7 @@ import {
 } from "../constants/images";
 import PhotoGrid from "../components/PhotoGrid";
 import { useLocation } from "react-router-dom";
+import Timeline from "../components/Timeline";
 
 const PortfolioPage = () => {
   const [imgShow, setImgShow] = useState(imgDesfiles);
@@ -55,6 +56,7 @@ const PortfolioPage = () => {
           <h1 className="text-4xl text-center font-bold pb-5">
             Mis Fotografías
           </h1>
+          <Timeline />
           <PhotoGrid images={imgShow} />
         </div>
       </section>
