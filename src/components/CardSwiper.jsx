@@ -22,7 +22,7 @@ import {
 const CardSwiper = () => {
   return (
     <section className="bg-white" id="portfolio">
-      <h2 className="py-5 text-center w-full px-2 font-bold font-body lg:text-2xl md:text-xl text-lg">¿Qué servicios de fotografías puedes contratar?</h2>
+      <h2 className="py-5 font-logo text-center w-full px-2 font-bold lg:text-2xl md:text-xl text-lg">¿Qué servicios de fotografías puedes contratar?</h2>
       <div className="py-5 h-[50vh] md:h-[40vh] lg:h-[75vh]">
         <Swiper
           navigation={true}

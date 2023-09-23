@@ -23,7 +23,6 @@ const PhotoGrid = ({ images }) => {
   };
 
   const layout = LAYOUTS[category] || LAYOUTS.default;
-
   return (
     <div className="grid grid-cols-6 gap-4">
       {Object.keys(images).map((key, index) => {
@@ -34,7 +33,8 @@ const PhotoGrid = ({ images }) => {
             key={key}
             src={images[key]}
             alt={`foto ${category}: ${key}`}
-            className={`w-full h-full max-h-[550px] object-cover col-span-${colSpan}`}
+            className={`w-full h-full max-h-[550px] object-cover`}
+            style={{ gridColumn: `span ${colSpan}` }}
           />
         );
       })}

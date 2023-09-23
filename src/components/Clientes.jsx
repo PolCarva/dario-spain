@@ -6,7 +6,7 @@ const Clientes = () => {
   return (
     <section className="p-normalize mt-10 pb-10">
       <div className="flex flex-col gap-5">
-        <h2 className="text-4xl font-bold text-center">
+        <h2 className="text-4xl font-bold text-center  font-logo">
           Nuestros clientes destacados
         </h2>
         <ClientCard

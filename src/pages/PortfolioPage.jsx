@@ -53,7 +53,7 @@ const PortfolioPage = () => {
     <MainLayout>
       <section className="bg-gradient-to-b from-[#767676] via-10% via-white to-white relative font-body py-5">
         <div className="p-normalize">
-          <h1 className="text-4xl text-center font-bold pb-5">
+          <h1 className="text-4xl text-center font-bold pb-5 font-logo">
             Mis Fotografías
           </h1>
           <Timeline />
