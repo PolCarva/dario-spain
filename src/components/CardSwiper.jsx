@@ -58,7 +58,7 @@ const CardSwiper = () => {
               title="Conciertos"
               id="conciertos"
               img={imgConciertos.concierto1}
-              icon={<FaMusic className="w-full h-full p-2" />}
+              icon={<FaMusic className="w-full h-full p-1.5" />}
             />
           </SwiperSlide>
           <SwiperSlide className="h-4/5 mb-16">
@@ -66,7 +66,7 @@ const CardSwiper = () => {
               title="Moda"
               id="moda"
               img={imgModa.moda1}
-              icon={<GiAmpleDress className="w-full h-full p-1" />}
+              icon={<GiAmpleDress className="w-full h-full p-1.5" />}
             />
           </SwiperSlide>
           <SwiperSlide className="h-4/5 mt-16">
@@ -74,7 +74,7 @@ const CardSwiper = () => {
               title="Fotoperiodismo"
               id="fotoperiodismo"
               img={imgFotoperiodismo.fotoperiodismo1}
-              icon={<BsCameraReelsFill className="w-full h-full p-2" />}
+              icon={<BsCameraReelsFill className="w-full h-full p-1.5" />}
             />
           </SwiperSlide>
           <SwiperSlide className="h-4/5 ">
@@ -82,7 +82,7 @@ const CardSwiper = () => {
               title="Eventos"
               id="eventos"
               img={imgEventos.evento1}
-              icon={<BiSolidDrink className="w-full h-full p-2" />}
+              icon={<BiSolidDrink className="w-full h-full p-1.5" />}
             />
           </SwiperSlide>
           <SwiperSlide className="h-4/5 mt-16">
