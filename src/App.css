@@ -20,6 +20,17 @@
     transform: translateX(1rem);
 }
 
+.carousel .swiper-slide:not(.swiper-slide-active) {
+    filter: blur(5px);
+}
+
+.carousel .swiper-pagination-bullet {
+    background: white !important;
+}
+
+.carousel .swiper-pagination-bullet-active {
+    background: white !important;
+}
 
 /* Estilo cuando la clase active está presente */
 .active span {

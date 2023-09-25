@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import Carousel3D from "./Carousel3D";
 
 const PhotoGrid = ({ images }) => {
+  const [isCarouselOpen, setIsCarouselOpen] = useState(false);
+  const [activeImage, setActiveImage] = useState(null);
+
   const location = useLocation();
   const [category, setCategory] = useState("default");
 
@@ -23,22 +27,34 @@ const PhotoGrid = ({ images }) => {
   };
 
   const layout = LAYOUTS[category] || LAYOUTS.default;
+
+  const handleImageClick = (key) => {
+    setActiveImage(key);
+    setIsCarouselOpen(true);
+  };
+
   return (
-    <div className="grid grid-cols-6 gap-4">
-      {Object.keys(images).map((key, index) => {
-        const colSpan = layout[index];
-        return (
-          <img
-            loading="lazy"
-            key={key}
-            src={images[key]}
-            alt={`foto ${category}: ${key}`}
-            className={`w-full h-full max-h-[550px] object-cover`}
-            style={{ gridColumn: `span ${colSpan}` }}
-          />
-        );
-      })}
-    </div>
+    <>
+      {isCarouselOpen && (
+        <Carousel3D activeImage={activeImage} images={images} onClose={() => {setIsCarouselOpen(false)}}/>
+      )}
+      <div className="grid grid-cols-6 gap-4">
+        {Object.keys(images).map((key, index) => {
+          const colSpan = layout[index];
+          return (
+            <img
+              loading="lazy"
+              onClick={() => handleImageClick(key)}
+              key={key}
+              src={images[key]}
+              alt={`foto ${category}: ${key}`}
+              className={`w-full h-full max-h-[550px] object-cover cursor-pointer select-none hover:scale-110 hover:border-2 hover:border-white transition-all duration-300`}
+              style={{ gridColumn: `span ${colSpan}` }}
+            />
+          );
+        })}
+      </div>
+    </>
   );
 };
 
