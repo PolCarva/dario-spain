@@ -48,7 +48,7 @@ const PhotoGrid = ({ images }) => {
               key={key}
               src={images[key]}
               alt={`foto ${category}: ${key}`}
-              className={`w-full h-full max-h-[550px] object-cover cursor-pointer select-none hover:scale-110 hover:border-2 hover:border-white transition-all duration-300`}
+              className={`w-full h-full !max-h-[80vh] object-cover cursor-pointer select-none hover:scale-110 border-2 border-transparent hover:border-white transition-all duration-300`}
               style={{ gridColumn: `span ${colSpan}` }}
             />
           );
