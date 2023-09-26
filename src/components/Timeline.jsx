@@ -21,7 +21,7 @@ const TIMELINE_DATA = [
 
 const Timeline = () => {
   return (
-    <div className="relative flex justify-between w-full lg:w-2/3 mx-auto mb-5 md:mb-12 font-body">
+    <div className="relative flex justify-between w-full lg:w-4/5 xl:w-2/3 mx-auto mb-5 md:mb-12 font-body">
       <div className="absolute bg-black w-full h-[1px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
       {TIMELINE_DATA.map((item) => (
         <TimelineItem key={item.label} {...item} />
