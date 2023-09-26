@@ -5,10 +5,9 @@ import CardSwiper from "../components/CardSwiper";
 import { useEffect } from "react";
 import { scroller } from "react-scroll";
 import AboutYClientes from "../components/AboutYClientes";
+import WhatsappFixedIcon from "../components/WhatsappFixedIcon";
 
 const HomePage = () => {
-
-
   useEffect(() => {
     const sectionToScroll = localStorage.getItem("scrollToSection");
     if (sectionToScroll) {
@@ -24,6 +23,7 @@ const HomePage = () => {
 
   return (
     <MainLayout>
+      <WhatsappFixedIcon />
       <Hero />
       <CardSwiper />
       <AboutYClientes />

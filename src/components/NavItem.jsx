@@ -8,7 +8,7 @@ const NavItem = ({ item, closeNav }) => {
   const location = useLocation();
   const navLinkRef = useRef(null);
 
-  const isPortfolio = location.pathname.includes("/portfolio");
+  const isNotHome = location.pathname !== "/";
 
   const toggleDropdownHandler = () => {
     setDropdown((curState) => !curState);
@@ -16,7 +16,7 @@ const NavItem = ({ item, closeNav }) => {
 
   const handleNavLinkClick = () => {
     closeNav();
-    if (isPortfolio) {
+    if (isNotHome) {
       localStorage.setItem("scrollToSection", item.href);
     }
   };
@@ -25,7 +25,7 @@ const NavItem = ({ item, closeNav }) => {
     <li className="relative group font-body font-light text-xl md:text-sm">
       {/* Nav Links */}
       {item.type === "navLink" ? (
-        isPortfolio ? (
+        isNotHome ? (
           <Link
             to="/"
             onClick={handleNavLinkClick}

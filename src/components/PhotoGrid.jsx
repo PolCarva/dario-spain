@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Carousel3D from "./Carousel3D";
+import WhatsappFixedIcon from "../components/WhatsappFixedIcon";
+
 
 const PhotoGrid = ({ images }) => {
   const [isCarouselOpen, setIsCarouselOpen] = useState(false);
@@ -35,6 +37,7 @@ const PhotoGrid = ({ images }) => {
 
   return (
     <>
+    <WhatsappFixedIcon/>
       {isCarouselOpen && (
         <Carousel3D activeImage={activeImage} images={images} onClose={() => {setIsCarouselOpen(false)}}/>
       )}
