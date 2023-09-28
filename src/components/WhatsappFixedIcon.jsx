@@ -1,9 +1,11 @@
 import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 const WhatsappFixedIcon = () => {
+  const { t } = useTranslation();
   const textoPredefinido =
-    "Hola Darío, me gustaría saber más sobre tus servicios";
+  t("contact-buttons.whatsapp-msg");
 
   const abrirWhatsapp = () => {
     const numeroTelefono = "+549351573-9982"; // Reemplaza con el número de teléfono al que deseas enviar el mensaje

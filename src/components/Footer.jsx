@@ -6,7 +6,10 @@ import { FiMail } from "react-icons/fi";
 import { Link as NavLink } from "react-scroll";
 import { Link, useLocation } from "react-router-dom";
 
+import { useTranslation } from "react-i18next";
+
 const Footer = () => {
+  const { t } = useTranslation();
   const location = useLocation();
 
   const isPortfolio = location.pathname === "/portfolio";
@@ -26,8 +29,8 @@ const Footer = () => {
             alt="Darío Spain"
             className="w-1/2 mx-auto md:w-full"
           />
-          <span className=" text-center font-light italic text-sm">
-            “Si puede ser escrito o pensado, puede ser fotografiado”
+          <span className="md:-mx-5 text-center font-light italic text-sm">
+            {t("footer.quote")}
           </span>
         </div>
         <div className="flex flex-col gap-3 items-center text-xl md:text-base">
@@ -41,7 +44,7 @@ const Footer = () => {
                   onClick={() => handleNavLinkClick("hero")}
                   className="cursor-pointer"
                 >
-                  Inicio
+                  {t("navbar.home")}
                 </Link>
               ) : (
                 <NavLink
@@ -52,7 +55,7 @@ const Footer = () => {
                   duration={800}
                   className="cursor-pointer"
                 >
-                  Inicio
+                  {t("navbar.home")}
                 </NavLink>
               )}
             </li>
@@ -65,7 +68,7 @@ const Footer = () => {
                   onClick={() => handleNavLinkClick("about")}
                   className="cursor-pointer"
                 >
-                  Acerca de mi
+                  {t("navbar.about-me")}
                 </Link>
               ) : (
                 <NavLink
@@ -76,7 +79,7 @@ const Footer = () => {
                   duration={800}
                   className="cursor-pointer"
                 >
-                  Acerca de mi
+                  {t("navbar.about-me")}{" "}
                 </NavLink>
               )}
             </li>
@@ -84,7 +87,7 @@ const Footer = () => {
             <li className="font-light flex gap-4 items-center justify-start">
               <div className="w-0.5 h-0.5 bg-white rounded-full"></div>
               <Link to="/portfolio" className="cursor-pointer">
-                Portfolio
+                {t("navbar.portfolio")}
               </Link>
             </li>
             {/* Contacto */}
@@ -96,7 +99,7 @@ const Footer = () => {
                   onClick={() => handleNavLinkClick("contact")}
                   className="cursor-pointer"
                 >
-                  Contacto
+                  {t("navbar.contact")}
                 </Link>
               ) : (
                 <NavLink
@@ -107,7 +110,7 @@ const Footer = () => {
                   duration={800}
                   className="cursor-pointer"
                 >
-                  Contacto
+                  {t("navbar.contact")}
                 </NavLink>
               )}
             </li>
@@ -115,7 +118,7 @@ const Footer = () => {
         </div>
         <div id="contact" className="flex flex-col gap-5">
           <p className="text-center font-bold text-xl md:text-base">
-            Seguime y contáctanos
+            {t("footer.follow-me")}
           </p>
           <div className="flex justify-between w-1/2 mx-auto md:w-full">
             <BsInstagram
@@ -129,7 +132,7 @@ const Footer = () => {
               onClick={() => {
                 window.open(
                   `https://api.whatsapp.com/send?phone=+549351573-9982&text=${encodeURIComponent(
-                    "Hola Darío, me gustaría saber más sobre tus servicios"
+                    t("contact-buttons.whatsapp-msg")
                   )}`,
                   "_blank"
                 );
@@ -138,16 +141,17 @@ const Footer = () => {
             <FiMail
               className="h-8 w-8 cursor-pointer hover:text-primary-subtle transition-colors duration-300"
               onClick={() => {
-                window.location.href =
-                  "mailto:dariolocucion@gmail.com?subject=Interesado en tus servicios&body=Hola Darío, me gustaría saber más sobre tus servicios.";
+                window.location.href = `mailto:dariolocucion@gmail.com?subject=Interesado en tus servicios&body=${t(
+                  "contact-buttons.whatsapp-msg"
+                )}`;
               }}
             />
           </div>
         </div>
       </div>
       <p className="text-center mt-10 text-xs text-gray font-light">
-        Copyright ©️ 2023 <br />
-        Todos los derechos reservados
+        Copyright ©️ {new Date().getFullYear()} <br />
+        {t("footer.rights")}
       </p>
     </div>
   );

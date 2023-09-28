@@ -10,10 +10,13 @@ import {
   imgModa,
 } from "../constants/images";
 import PhotoGrid from "../components/PhotoGrid";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Timeline from "../components/Timeline";
 
+import { useTranslation } from "react-i18next";
+
 const PortfolioPage = () => {
+  const { t } = useTranslation();
   const [imgShow, setImgShow] = useState(imgDesfiles);
   const location = useLocation();
 
@@ -52,10 +55,13 @@ const PortfolioPage = () => {
   return (
     <MainLayout>
       <section className="bg-gradient-to-b from-[#767676] via-10% via-white to-white relative font-body py-5">
+        <Link
+          to="/"
+          className="p-normalize text-primary underline font-semibold hover:text-primary-hover transition-colors duration-300"
+        >
+          {t("portfolio.back-home")}
+        </Link>
         <div className="p-normalize flex flex-col md:gap-5">
-          {/* <h1 className="text-4xl text-center font-bold pb-5 font-logo">
-            Mis Fotografías
-          </h1> */}
           <Timeline />
           <PhotoGrid images={imgShow} />
         </div>

@@ -1,0 +1,54 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "portfolio": "Poratfolio",
+    "about-me": "Sobre Mi",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "hello": "Hola, soy",
+    "span": "Capturo experiencias visuales extraordinarias",
+    "contact-me": "Contactame"
+  },
+  "contact-buttons": {
+    "whatsapp-msg": "¡Hola Darío! Me gustaría saber más sobre tus servicios de fotografía."
+  },
+  "portfolio": {
+    "title": "¿Qué servicios de fotografías puedes contratar?",
+    "back-home": "Volver al inicio",
+    "categories": {
+      "fashion-shows": "Desfiles",
+      "concerts": "Conciertos",
+      "fashion": "Moda",
+      "photojournalism": "Fotoperiodismo",
+      "events": "Eventos",
+      "books": "Book's"
+    }
+  },
+  "about-me": {
+    "title": "Acerca de mí",
+    "subtitle": "¿Cómo están? Les cuento un poco sobre quien soy",
+    "paragraph-1": "Durante 10 años, me desempeñé como locutor y periodista en Córdoba, Argentina. Durante ese tiempo, realicé trabajos como columnista deportivo y de espectáculos, móviles radiales, fui productor informativo y de contenido para varios medios radiofónicos, además fui creador y conductor de los programas radiales \"Recta Final\", \"Córdoba Sport\" y \"Energía Deportiva.\"",
+    "paragraph-2": "Durante ese proceso, y como una forma de aportar aún más a dicha profesión, comencé a incursionar en el mundo de la fotografía deportiva.",
+    "paragraph-3": "Otra de mis grandes pasiones es la moda. Por eso, en paralelo, decidí formarme como asesor de imagen y personal shopper, con el propósito de fusionar la fotografía y la moda. Posteriormente, inicié mi trabajo en la productora de moda Pandora Estudio, donde actualmente me desarrollo como Productor Fotográfico.",
+    "paragraph-4": "También realizo fotografías de conciertos, desfiles de moda, eventos,  foto productos, fotoperiodismo y  books personales."
+  },
+  "clients": {
+    "title": "Nuestros clientes destacados",
+    "pandora-estudio": {
+      "title": "Pandora Estudio",
+      "desc": "Es una productora audiovisual, orientada a brindar servicios de Fotografía Profesional y pequeños videos, a Diseñadores y talentos emergentes del rubro Moda. También se cubren eventos de arte y conciertos.",
+      "quote": "\"Apoyamos el arte local con una visión divergente e inclusiva.\""
+    },
+    "pandora-beauty": {
+      "title": "Pandora Estudio",
+      "desc": "Servicios de Maquillaje profesional, Peluquería y Estilismo de Moda. Realización de producciones de moda.",
+      "by": "Pandora Beauty by Vanesa Araoz"
+    }
+  },
+  "footer": {
+    "quote": "\"Ver no es suficiente, tienes que sentir lo que estás fotografiando.\" André Kertesz",
+    "follow-me": "Seguime y contactame",
+    "rights": "Todos los derechos reservados"
+  }
+}

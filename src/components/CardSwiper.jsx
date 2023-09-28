@@ -9,6 +9,8 @@ import { BsCameraReelsFill } from "react-icons/bs";
 import { BiSolidDrink } from "react-icons/bi";
 import { LiaAddressBookSolid } from "react-icons/lia";
 
+import { useTranslation } from "react-i18next";
+
 import CardComponent from "./CardComponent";
 import {
   imgBooks,
@@ -20,9 +22,12 @@ import {
 } from "../constants/images";
 
 const CardSwiper = () => {
+  const { t } = useTranslation();
   return (
     <section className="bg-white" id="portfolio">
-      <h2 className="py-5 font-logo text-center w-full px-2 font-bold lg:text-2xl md:text-xl text-lg">¿Qué servicios de fotografías puedes contratar?</h2>
+      <h2 className="py-5 font-logo text-center w-full px-2 font-bold lg:text-2xl md:text-xl text-lg">
+        {t("portfolio.title")}
+      </h2>
       <div className="py-5 h-[50vh] md:h-[40vh] lg:h-[75vh]">
         <Swiper
           navigation={true}
@@ -47,7 +52,7 @@ const CardSwiper = () => {
         >
           <SwiperSlide className="h-4/5 flex mb-16">
             <CardComponent
-              title="Desfiles"
+              title={t("portfolio.categories.fashion-shows")}
               id="desfiles"
               img={imgDesfiles.desfile1}
               icon={<GiHighHeel className="w-full h-full p-1" />}
@@ -55,7 +60,7 @@ const CardSwiper = () => {
           </SwiperSlide>
           <SwiperSlide className="h-4/5 mt-16">
             <CardComponent
-              title="Conciertos"
+              title={t("portfolio.categories.concerts")}
               id="conciertos"
               img={imgConciertos.concierto1}
               icon={<FaMusic className="w-full h-full p-1.5" />}
@@ -63,7 +68,7 @@ const CardSwiper = () => {
           </SwiperSlide>
           <SwiperSlide className="h-4/5 mb-16">
             <CardComponent
-              title="Moda"
+              title={t("portfolio.categories.fashion")}
               id="moda"
               img={imgModa.moda1}
               icon={<GiAmpleDress className="w-full h-full p-1.5" />}
@@ -71,7 +76,7 @@ const CardSwiper = () => {
           </SwiperSlide>
           <SwiperSlide className="h-4/5 mt-16">
             <CardComponent
-              title="Fotoperiodismo"
+              title={t("portfolio.categories.photojournalism")}
               id="fotoperiodismo"
               img={imgFotoperiodismo.fotoperiodismo1}
               icon={<BsCameraReelsFill className="w-full h-full p-1.5" />}
@@ -79,7 +84,7 @@ const CardSwiper = () => {
           </SwiperSlide>
           <SwiperSlide className="h-4/5 ">
             <CardComponent
-              title="Eventos"
+              title={t("portfolio.categories.events")}
               id="eventos"
               img={imgEventos.evento1}
               icon={<BiSolidDrink className="w-full h-full p-1.5" />}
@@ -87,7 +92,7 @@ const CardSwiper = () => {
           </SwiperSlide>
           <SwiperSlide className="h-4/5 mt-16">
             <CardComponent
-              title="Book's"
+              title={t("portfolio.categories.books")}
               id="books"
               img={imgBooks.book1}
               icon={<LiaAddressBookSolid className="w-full h-full p-1" />}

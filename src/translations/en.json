@@ -1,0 +1,54 @@
+{
+  "navbar": {
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "about-me": "About Me",
+    "contact": "Contact"
+  },
+  "hero": {
+    "hello": "Hello, I am",
+    "span": "I capture extraordinary visual experiences",
+    "contact-me": "Contact me"
+  },
+  "contact-buttons": {
+    "whatsapp-msg": "Hello Dario! I would like to know more about your photography services."
+  },
+  "portfolio": {
+    "title": "What  photography services you can hire ?",
+    "back-home": "Back to home",
+    "categories": {
+      "fashion-shows": "Fashion shows",
+      "concerts": "Concerts",
+      "fashion": "Fashion",
+      "photojournalism": "Photojournalism",
+      "events": "Events",
+      "books": "Book's"
+    }
+  },
+  "about-me": {
+    "title": "About me",
+    "subtitle": "How are you? Let me tell you a bit about me",
+    "paragraph-1": "For 10 years, I worked as a broadcaster and journalist in Córdoba, Argentina. During that time, I worked as a sports and entertainment columnist, radio mobiles, I was an information and content producer for different radio media, and I was also the creator and host of radio programs like \"Recta final\", \"Córdoba Sport\" y \"Energía Deportiva\".",
+    "paragraph-2": "During that process, I began to get into the world  of sports photography.",
+    "paragraph-3": "Another of my great passions is fashion. For this reason, I decided to train as an image consultant and personal shopper, with the purpose of merging photography and fashion. Later, I started my work at the fashion production company \"Pandora Estudio\", where I am currently working as a photographic producer.",
+    "paragraph-4": "Also, I take photographs of concerts, fashion shows, events, product photos, photojournalism and personal books."
+  },
+  "clients": {
+    "title": "Our clients",
+    "pandora-estudio": {
+      "title": "Pandora Estudio",
+      "desc": "It is an audiovisual production company, focused on Professional Photography services and small videos to designers and emerging talents in the Fashion world. Art events and concerts are also covered.",
+      "quote": "\"We support local art with a divergent and inclusive vision.\""
+    },
+    "pandora-beauty": {
+      "title": "Pandora Estudio",
+      "desc": "Professional Makeup, Hairdressing and Fashion Styling Services. Realization of fashion productions.",
+      "by": "Pandora Beauty by Vanesa Araoz"
+    }
+  },
+  "footer": {
+    "quote": "\"Seeing is not enough; you have to feel what you photograph.\" André Kertesz",
+    "follow-me": "Follow and contact me",
+    "rights": "All rights  reserved"
+  }
+}

@@ -1,27 +1,16 @@
 import { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import { images, imgBooks } from "../constants/images";
 import NavItem from "./NavItem";
 
-const navItemsInfo = [
-  { name: "Inicio", type: "navLink", href: "hero" },
-  { name: "Portfolio", type: "navLink", href: "portfolio" },
-  { name: "Acerca de mi", type: "navLink", href: "about" },
-  { name: "Contacto", type: "navLink", href: "contact" },
-  {
-    name: "ES",
-    type: "dropdown",
-    items: [
-      { title: "ES", href: "#" },
-      { title: "EN", href: "#" },
-    ],
-  },
-];
-
 const Header = () => {
+  const { t, i18n } = useTranslation();
+
   const [navIsVisible, setNavIsVisible] = useState(false);
+  const [currentLang, setCurrentLang] = useState("es");
 
   const navVisibilityHandler = () => {
     setNavIsVisible((curState) => !curState);
@@ -30,6 +19,24 @@ const Header = () => {
   const closeNav = () => {
     setNavIsVisible(false);
   };
+
+  const changeLanguage = (lang) => {
+    setCurrentLang(lang);
+    i18n.changeLanguage(lang);
+    closeNav();
+  };
+
+  const navItemsInfo = [
+    { name: t("navbar.home"), type: "navLink", href: "hero" },
+    { name: t("navbar.portfolio"), type: "navLink", href: "portfolio" },
+    { name: t("navbar.about-me"), type: "navLink", href: "about" },
+    { name: t("navbar.contact"), type: "navLink", href: "contact" },
+    {
+      name: currentLang.toUpperCase(),
+      type: "dropdown",
+      items: [{ title: "ES" }, { title: "EN" }],
+    },
+  ];
 
   return (
     <section className="sticky top-0 left-0 right-0 z-50 bg-black p-normalize">
@@ -55,7 +62,14 @@ const Header = () => {
         >
           <ul className="items-center gap-y-5 flex flex-col lg:flex-row gap-x-2 font-semibold">
             {navItemsInfo.map((item, index) => (
-              <NavItem key={index} item={item} closeNav={closeNav} />
+              <NavItem
+                setLang={setCurrentLang}
+                lang={currentLang}
+                key={index}
+                item={item}
+                closeNav={closeNav}
+                onLanguageChange={changeLanguage}
+              />
             ))}
           </ul>
         </div>
