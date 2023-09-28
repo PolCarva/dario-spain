@@ -95,7 +95,7 @@ const NavItem = ({ item, closeNav, setLang, lang, onLanguageChange }) => {
                 dropdown ? "block" : "hidden"
               } lg:hidden transition-all duration-500 pt-4 lg:absolute lg:bottom-0 lg:right-3 lg:transform lg:translate-y-full lg:group-hover:block w-max`}
             >
-              <ul className="text-center border flex flex-col shadow-lg rounded-md overflow-hidden">
+              <ul className="text-center flex flex-col shadow-lg rounded-md overflow-hidden">
                 {item.items?.map((language, index) => (
                   <span
                     key={index}
@@ -105,8 +105,8 @@ const NavItem = ({ item, closeNav, setLang, lang, onLanguageChange }) => {
                     }}
                     className={`${
                       language.title.toUpperCase() === lang.toUpperCase() &&
-                      "bg-[#30353A]"
-                    } cursor-pointer transition-transform duration-300 flex justify-around items-center gap-1 bg-black text-white hover:text-white hover:bg-[#262b30] px-4 py-2`}
+                      "bg-[#E3E3E3]"
+                    } cursor-pointer transition-transform duration-300 flex justify-around items-center gap-1 bg-[#F8F8F8] text-black hover:bg-[#d6d4d4] px-4 py-2`}
                   >
                     {language.title.toUpperCase() === "ES" ? (
                       <img src={spainImg} />
