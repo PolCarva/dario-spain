@@ -4,6 +4,9 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
+import spainImg from "../assets/img/spain.png";
+import ukImg from "../assets/img/uk.png";
+
 const NavItem = ({ item, closeNav, setLang, lang, onLanguageChange }) => {
   const { t } = useTranslation();
 
@@ -76,20 +79,23 @@ const NavItem = ({ item, closeNav, setLang, lang, onLanguageChange }) => {
       ) : (
         item.type === "dropdown" && (
           // Dropdown
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center group">
             <button
               onClick={toggleDropdownHandler}
               className="flex gap-x-1 items-center px-4 transition-all duration-500"
             >
-              <span className="text-white">{item.name}</span>
-              <MdKeyboardArrowDown className="text-white" />
+              <span className="text-white flex gap-2 justify-between items-center">
+                {item.icon}
+                {item.name}
+              </span>
+              <MdKeyboardArrowDown className="text-white group-hover:rotate-180 transition-transform duration-300" />
             </button>
             <div
               className={`${
                 dropdown ? "block" : "hidden"
               } lg:hidden transition-all duration-500 pt-4 lg:absolute lg:bottom-0 lg:right-3 lg:transform lg:translate-y-full lg:group-hover:block w-max`}
             >
-              <ul className="bg-primary lg:bg-white text-center flex flex-col shadow-lg rounded-lg overflow-hidden">
+              <ul className="text-center border flex flex-col shadow-lg rounded-md overflow-hidden">
                 {item.items?.map((language, index) => (
                   <span
                     key={index}
@@ -98,9 +104,16 @@ const NavItem = ({ item, closeNav, setLang, lang, onLanguageChange }) => {
                       onLanguageChange(language.title.toLowerCase());
                     }}
                     className={`${
-                      language.title.toUpperCase() === lang.toUpperCase() && "bg-primary-hover"
-                    } cursor-pointer bg-primary text-white hover:text-white hover:bg-primary-hover px-4 py-2`}
+                      language.title.toUpperCase() === lang.toUpperCase() &&
+                      "bg-[#30353A]"
+                    } cursor-pointer transition-transform duration-300 flex justify-around items-center gap-1 bg-black text-white hover:text-white hover:bg-[#262b30] px-4 py-2`}
                   >
+                    {language.title.toUpperCase() === "ES" ? (
+                      <img src={spainImg} />
+                    ) : (
+                      <img src={ukImg} />
+                    )}
+
                     {language.title.toUpperCase()}
                   </span>
                 ))}

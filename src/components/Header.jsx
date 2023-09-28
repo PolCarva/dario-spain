@@ -6,6 +6,9 @@ import { useTranslation } from "react-i18next";
 import { images, imgBooks } from "../constants/images";
 import NavItem from "./NavItem";
 
+import spainImg from "../assets/img/spain.png";
+import ukImg from "../assets/img/uk.png";
+
 const Header = () => {
   const { t, i18n } = useTranslation();
 
@@ -33,6 +36,13 @@ const Header = () => {
     { name: t("navbar.contact"), type: "navLink", href: "contact" },
     {
       name: currentLang.toUpperCase(),
+      icon:
+        currentLang === "es" ? (
+          <img src={spainImg} alt="Spain Flag" />
+        ) : (
+          <img src={ukImg} alt="UK Flag" />
+        ),
+
       type: "dropdown",
       items: [{ title: "ES" }, { title: "EN" }],
     },
