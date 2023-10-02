@@ -3,8 +3,8 @@ import { Link as NavLink } from "react-scroll";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import SpainIcon from "./spainIcon";
-import UkIcon from "./ukIcon";
+import SpainIcon from "./SpainIcon";
+import UkIcon from "./SkIcon";
 
 const NavItem = ({ item, closeNav, setLang, lang, onLanguageChange }) => {
   const { t } = useTranslation();
