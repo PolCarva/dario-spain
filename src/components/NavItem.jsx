@@ -4,7 +4,7 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import SpainIcon from "./SpainIcon";
-import UkIcon from "./SkIcon";
+import UkIcon from "./UkIcon";
 
 const NavItem = ({ item, closeNav, setLang, lang, onLanguageChange }) => {
   const { t } = useTranslation();
