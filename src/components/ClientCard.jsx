@@ -1,15 +1,18 @@
 import React from "react";
+import { Link } from "react-scroll";
 
-const ClientCard = ({ title, desc, quote, img, by }) => {
+const ClientCard = ({ title, desc, quote, img, by, url }) => {
   return (
     <div className="bg-white w-full font-body max-w-[900px] mx-auto shadow-lg rounded-3xl overflow-hidden flex flex-col md:flex-row justify-between">
       <div className="p-6 flex flex-col justify-center w-full md:w-4/5">
-        <h2 className="text-2xl font-bold text-primary">{title}</h2>
+        <a href={url} target="_blank" className="text-2xl hover:underline cursor-pointer font-bold text-primary">
+          {title}
+        </a>
         <img
-            src={img}
-            alt={title}
-            className=" md:hidden my-2 aspect-video rounded-3xl object-cover w-full"
-          />
+          src={img}
+          alt={title}
+          className=" md:hidden my-2 aspect-video rounded-3xl object-cover w-full"
+        />
         {by && <p className="mt-2 text-gray-600 text-sm">{by}</p>}
         <p className="mt-2 text-gray-600 text-sm">{desc}</p>
         {quote && (

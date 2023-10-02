@@ -8,6 +8,8 @@ import NavItem from "./NavItem";
 
 import spainImg from "../assets/img/spain.png";
 import ukImg from "../assets/img/uk.png";
+import SpainIcon from "./spainIcon";
+import UkIcon from "./ukIcon";
 
 const Header = () => {
   const { t, i18n } = useTranslation();
@@ -38,10 +40,10 @@ const Header = () => {
       name: currentLang.toUpperCase(),
       icon:
         currentLang === "es" ? (
-          <img src={spainImg} alt="Spain Flag" />
+          <SpainIcon className={"w-4 h-full"}/>
         ) : (
-          <img src={ukImg} alt="UK Flag" />
-        ),
+          <UkIcon className={"w-4 h-full"}/>
+          ),
 
       type: "dropdown",
       items: [{ title: "ES" }, { title: "EN" }],

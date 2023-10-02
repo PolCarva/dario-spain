@@ -13,12 +13,14 @@ const Clientes = () => {
           {t("clients.title")}
         </h2>
         <ClientCard
+          url={"https://pandoraestudio1.wixsite.com/pandoraestudio?fbclid=PAAaZ0iLdkS81N1bI77xp2enLFStEk3wh4Uh8KjYFE8uSUbb9KsSZEVuIHqH8"}
           title={t("clients.pandora-estudio.title")}
           desc={t("clients.pandora-estudio.desc")}
           quote={t("clients.pandora-estudio.quote")}
           img={images.cliente1}
         />
         <ClientCard
+          url={"https://instagram.com/pandoraestudio.ok?igshid=NzZlODBkYWE4Ng=="}
           title={t("clients.pandora-beauty.title")}
           by={t("clients.pandora-beauty.by")}
           desc={t("clients.pandora-beauty.desc")}

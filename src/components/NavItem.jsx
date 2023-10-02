@@ -3,9 +3,8 @@ import { Link as NavLink } from "react-scroll";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-
-import spainImg from "../assets/img/spain.png";
-import ukImg from "../assets/img/uk.png";
+import SpainIcon from "./spainIcon";
+import UkIcon from "./ukIcon";
 
 const NavItem = ({ item, closeNav, setLang, lang, onLanguageChange }) => {
   const { t } = useTranslation();
@@ -109,9 +108,9 @@ const NavItem = ({ item, closeNav, setLang, lang, onLanguageChange }) => {
                     } cursor-pointer transition-transform duration-300 flex justify-around items-center gap-1 bg-[#F8F8F8] text-black hover:bg-[#d6d4d4] px-4 py-2`}
                   >
                     {language.title.toUpperCase() === "ES" ? (
-                      <img src={spainImg} />
+                      <SpainIcon className={"w-4 h-full"} />
                     ) : (
-                      <img src={ukImg} />
+                      <UkIcon className={"w-4 h-full"} />
                     )}
 
                     {language.title.toUpperCase()}

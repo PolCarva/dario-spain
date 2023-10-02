@@ -61,7 +61,7 @@ const PortfolioPage = () => {
         >
           {t("portfolio.back-home")}
         </Link>
-        <div className="p-normalize mt-5 md:mt-0 flex flex-col md:gap-5">
+        <div className="p-normalize my-6 md:mt-0 flex flex-col md:gap-5">
           <Timeline />
           <PhotoGrid images={imgShow} />
         </div>
