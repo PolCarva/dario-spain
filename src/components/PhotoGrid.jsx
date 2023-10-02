@@ -20,6 +20,11 @@ const PhotoGrid = ({ images }) => {
     setCategory(ultimoParametro);
   }, [location.pathname]);
 
+  useEffect(() => {
+    // Cuando cambia la categoría, reinicializa el estado de las imágenes cargadas
+    setLoadedImages({});
+  }, [category]);
+
   const LAYOUTS = {
     default: [2, 2, 2, 3, 3, 2, 2, 2, 3, 3],
     desfiles: [2, 2, 2, 3, 3, 2, 2, 2, 3, 3],
