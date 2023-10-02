@@ -3,22 +3,9 @@ import { useLocation } from "react-router-dom";
 import Carousel3D from "./Carousel3D";
 import WhatsappFixedIcon from "../components/WhatsappFixedIcon";
 
-const getSmallImagePath = (filename) => {
-  // Dividir el nombre del archivo en el nombre base y la extensión
-  const [basemame, extension] = filename.split('.');
-
-  // Verificar si la extensión es "jpg" (sin importar mayúsculas o minúsculas)
-  if (extension.toLowerCase() === 'jpg') {
-    // Agregar "-small" antes de la extensión y unir nuevamente
-    const newName = `${basemame}-small.${extension}`;
-    return newName;
-  } else {
-    // Si la extensión no es "jpg", simplemente devolvemos el nombre original
-    return filename;
-  }
-};
 
 const PhotoGrid = ({ images }) => {
+  console.log(images);
   const [isCarouselOpen, setIsCarouselOpen] = useState(false);
   const [activeImage, setActiveImage] = useState(null);
   const location = useLocation();
@@ -74,7 +61,7 @@ const PhotoGrid = ({ images }) => {
           const colSpan = layout[index];
           const isImageLoaded = loadedImages[key];
           const mainImage = images[key];
-          const smallImage = getSmallImagePath(mainImage); // Obtener la ruta de la imagen small
+          const smallImage = images[key+"Small"]; // Obtener la ruta de la imagen small
 
           return (
             <img
