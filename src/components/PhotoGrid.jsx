@@ -56,27 +56,32 @@ const PhotoGrid = ({ images }) => {
           }}
         />
       )}
-      <div className="grid grid-cols-6 gap-4">
-        {Object.keys(images).map((key, index) => {
-          const colSpan = layout[index];
-          const isImageLoaded = loadedImages[key];
-          const mainImage = images[key];
-          const smallImage = images[key+"Small"]; // Obtener la ruta de la imagen small
+     <div className="grid grid-cols-6 gap-4">
+  {Object.keys(images).map((key, index) => {
+    // Verificar si la clave contiene "Small" y omitirla si es así
+    if (key.includes("Small")) {
+      return null; // Omitir la imagen "small"
+    }
 
-          return (
-            <img
-              onLoad={() => handleImageLoaded(key)}
-              onClick={() => handleImageClick(key)}
-              key={key}
-              loading="lazy"
-              src={isImageLoaded ? mainImage : smallImage}
-              alt={`foto ${category}: ${key}`}
-              className={`${!isImageLoaded ? "blur-sm" : "blur-0"} w-full h-full !max-h-[80vh] object-cover cursor-pointer select-none hover:scale-110 border-2 border-transparent hover:border-white transition-all duration-300`}
-              style={{ gridColumn: `span ${colSpan}` }}
-            />
-          );
-        })}
-      </div>
+    const colSpan = layout[index];
+    const isImageLoaded = loadedImages[key];
+    const mainImage = images[key];
+    const smallImage = images[key + "Small"]; // Obtener la ruta de la imagen small
+
+    return (
+      <img
+        onLoad={() => handleImageLoaded(key)}
+        onClick={() => handleImageClick(key)}
+        key={key}
+        loading="lazy"
+        src={isImageLoaded ? mainImage : smallImage}
+        alt={`foto ${category}: ${key}`}
+        className={`${!isImageLoaded ? "blur-sm" : "blur-0"} w-full h-full !max-h-[80vh] object-cover cursor-pointer select-none hover:scale-110 border-2 border-transparent hover:border-white transition-all duration-300`}
+        style={{ gridColumn: `span ${colSpan}` }}
+      />
+    );
+  })}
+</div>
     </>
   );
 };
