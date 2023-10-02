@@ -3,10 +3,19 @@ import { useLocation } from "react-router-dom";
 import Carousel3D from "./Carousel3D";
 import WhatsappFixedIcon from "../components/WhatsappFixedIcon";
 
-const getSmallImagePath = (mainImagePath) => {
-  const parts = mainImagePath.split("/");
-  parts.splice(-1, 0, "small");
-  return parts.join("/");
+const getSmallImagePath = (filename) => {
+  // Dividir el nombre del archivo en el nombre base y la extensión
+  const [basemame, extension] = filename.split('.');
+
+  // Verificar si la extensión es "jpg" (sin importar mayúsculas o minúsculas)
+  if (extension.toLowerCase() === 'jpg') {
+    // Agregar "-small" antes de la extensión y unir nuevamente
+    const newName = `${basemame}-small.${extension}`;
+    return newName;
+  } else {
+    // Si la extensión no es "jpg", simplemente devolvemos el nombre original
+    return filename;
+  }
 };
 
 const PhotoGrid = ({ images }) => {
