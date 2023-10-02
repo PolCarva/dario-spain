@@ -1,13 +1,14 @@
 import React from "react";
-import { Link } from "react-scroll";
 
 const ClientCard = ({ title, desc, quote, img, by, url }) => {
   return (
-    <div className="bg-white w-full font-body max-w-[900px] mx-auto shadow-lg rounded-3xl overflow-hidden flex flex-col md:flex-row justify-between">
+    <a href={url} target="_blank" className="bg-white group hover:scale-105 transition-transform duration-300 w-full font-body max-w-[900px] mx-auto shadow-lg rounded-3xl overflow-hidden flex flex-col md:flex-row justify-between">
       <div className="p-6 flex flex-col justify-center w-full md:w-4/5">
-        <a href={url} target="_blank" className="text-2xl w-max hover:underline cursor-pointer font-bold text-primary">
+        <h2
+          className="text-2xl group-hover:underline cursor-pointer font-bold text-primary"
+        >
           {title}
-        </a>
+        </h2>
         <img
           src={img}
           alt={title}
@@ -29,7 +30,7 @@ const ClientCard = ({ title, desc, quote, img, by, url }) => {
           />
         </div>
       </div>
-    </div>
+    </a>
   );
 };
 

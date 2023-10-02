@@ -6,10 +6,9 @@ import { useTranslation } from "react-i18next";
 import { images, imgBooks } from "../constants/images";
 import NavItem from "./NavItem";
 
-import spainImg from "../assets/img/spain.png";
-import ukImg from "../assets/img/uk.png";
-import SpainIcon from "./spainIcon";
-import UkIcon from "./ukIcon";
+
+import SpainIcon from "./SpainIcon";
+import UkIcon from "./UkIcon";
 
 const Header = () => {
   const { t, i18n } = useTranslation();
