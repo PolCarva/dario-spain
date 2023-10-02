@@ -5,7 +5,7 @@ const ClientCard = ({ title, desc, quote, img, by, url }) => {
   return (
     <div className="bg-white w-full font-body max-w-[900px] mx-auto shadow-lg rounded-3xl overflow-hidden flex flex-col md:flex-row justify-between">
       <div className="p-6 flex flex-col justify-center w-full md:w-4/5">
-        <a href={url} target="_blank" className="text-2xl hover:underline cursor-pointer font-bold text-primary">
+        <a href={url} target="_blank" className="text-2xl w-max hover:underline cursor-pointer font-bold text-primary">
           {title}
         </a>
         <img
