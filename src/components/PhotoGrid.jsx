@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Carousel3D from "./Carousel3D";
 import WhatsappFixedIcon from "../components/WhatsappFixedIcon";
-
+import loader from "../assets/img/loader.png";
 
 const PhotoGrid = ({ images }) => {
-  console.log(images);
   const [isCarouselOpen, setIsCarouselOpen] = useState(false);
   const [activeImage, setActiveImage] = useState(null);
   const location = useLocation();
   const [category, setCategory] = useState("default");
+  const [isLoading, setIsLoading] = useState(true);
 
   const [loadedImages, setLoadedImages] = useState({});
 
@@ -23,6 +23,7 @@ const PhotoGrid = ({ images }) => {
   useEffect(() => {
     // Cuando cambia la categoría, reinicializa el estado de las imágenes cargadas
     setLoadedImages({});
+    setIsLoading(true);
   }, [category]);
 
   const LAYOUTS = {
@@ -49,6 +50,14 @@ const PhotoGrid = ({ images }) => {
     }));
   };
 
+  useEffect(() => {
+    // Check if all images have finished loading
+    const allImagesLoaded = Object.keys(images).every(
+      (key) => key.includes("Small") || loadedImages[key]
+    );
+    setIsLoading(!allImagesLoaded);
+  }, [loadedImages, images]);
+
   return (
     <>
       <WhatsappFixedIcon />
@@ -61,32 +70,40 @@ const PhotoGrid = ({ images }) => {
           }}
         />
       )}
-     <div className="grid grid-cols-6 gap-4">
-  {Object.keys(images).map((key, index) => {
-    // Verificar si la clave contiene "Small" y omitirla si es así
-    if (key.includes("Small")) {
-      return null; // Omitir la imagen "small"
-    }
 
-    const colSpan = layout[index];
-    const isImageLoaded = loadedImages[key];
-    const mainImage = images[key];
-    const smallImage = images[key + "Small"]; // Obtener la ruta de la imagen small
+      <div className="grid grid-cols-6 gap-4">
+        {isLoading && (
+          <div className="col-span-6 w-full h-full flex items-center justify-center">
+            <img src={loader} alt="Loading..." className="w-12 h-12 animate-spin"/>
+          </div>
+        )}
+        {Object.keys(images).map((key, index) => {
+          // Verificar si la clave contiene "Small" y omitirla si es así
+          if (key.includes("Small")) {
+            return null; // Omitir la imagen "small"
+          }
 
-    return (
-      <img
-        onLoad={() => handleImageLoaded(key)}
-        onClick={() => handleImageClick(key)}
-        key={key}
-        loading="lazy"
-        src={isImageLoaded ? mainImage : smallImage}
-        alt={`foto ${category}: ${key}`}
-        className={`${!isImageLoaded ? "blur-sm" : "blur-0"} w-full h-full !max-h-[80vh] object-cover cursor-pointer select-none hover:scale-110 border-2 border-transparent hover:border-white transition-all duration-300`}
-        style={{ gridColumn: `span ${colSpan}` }}
-      />
-    );
-  })}
-</div>
+          const colSpan = layout[index];
+          const isImageLoaded = loadedImages[key];
+          const mainImage = images[key];
+          const smallImage = images[key + "Small"]; // Obtener la ruta de la imagen small
+
+          return (
+            <img
+              onLoad={() => handleImageLoaded(key)}
+              onClick={() => handleImageClick(key)}
+              key={key}
+              loading="lazy"
+              src={isImageLoaded ? mainImage : smallImage}
+              alt={`foto ${category}: ${key}`}
+              className={`${
+                !isImageLoaded ? "blur-sm" : "blur-0"
+              } w-full h-full !max-h-[80vh] object-cover cursor-pointer select-none hover:scale-110 border-2 border-transparent hover:border-white transition-all duration-300`}
+              style={{ gridColumn: `span ${colSpan}` }}
+            />
+          );
+        })}
+      </div>
     </>
   );
 };
