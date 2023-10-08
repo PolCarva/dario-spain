@@ -74,7 +74,11 @@ const PhotoGrid = ({ images }) => {
       <div className="grid grid-cols-6 gap-4">
         {isLoading && (
           <div className="col-span-6 w-full h-full flex items-center justify-center">
-            <img src={loader} alt="Loading..." className="w-12 h-12 animate-spin"/>
+            <img
+              src={loader}
+              alt="Loading..."
+              className="w-12 h-12 animate-spin"
+            />
           </div>
         )}
         {Object.keys(images).map((key, index) => {
@@ -98,7 +102,7 @@ const PhotoGrid = ({ images }) => {
               alt={`foto ${category}: ${key}`}
               className={`${
                 !isImageLoaded ? "blur-sm" : "blur-0"
-              } w-full h-full !max-h-[80vh] object-cover cursor-pointer select-none hover:scale-110 border-2 border-transparent hover:border-white transition-all duration-300`}
+              } w-full h-full !max-h-[80vh] object-cover cursor-pointer select-none hover:z-10 hover:scale-110 border-2 border-transparent hover:border-white transition-all duration-300`}
               style={{ gridColumn: `span ${colSpan}` }}
             />
           );
