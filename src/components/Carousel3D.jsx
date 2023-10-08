@@ -6,7 +6,7 @@ import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 
 const Carousel3D = ({ activeImage, images, onClose }) => {
   const activeIndex = Object.keys(images).indexOf(activeImage);
-
+  console.log(images);
   return (
     <div className="w-full h-full fixed z-50 inset-0 p-5 bg-gradient-to-b from-primary to-black">
       <div className="absolute top-5 right-5 text-white w-8 h-8 z-50">
@@ -35,15 +35,16 @@ const Carousel3D = ({ activeImage, images, onClose }) => {
         modules={[EffectCoverflow, Pagination, Navigation]}
         className="mySwiper carousel absolute inset-0 z-0"
       >
-        {Object.values(images).map(
-          (image, index) =>
-            !image.includes("small") && (
+        {Object.keys(images).map(
+          (key, index) =>
+            !key.includes("Small") && (
               <SwiperSlide
                 key={index}
                 className="flex items-center justify-center h-full"
               >
                 <img
-                  src={image}
+                  src={images[key]}
+                  alt={`foto ${images[key]}`}
                   className={`object-contain w-full max-h-[70vh] select-none`}
                 />
               </SwiperSlide>
