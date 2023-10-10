@@ -1,5 +1,8 @@
 import logo from "../assets/img/logo.svg";
 
+/* FOTO DARIO */
+import darioImg from "../assets/img/FotoDario.jpg";
+
 /* CLIENTES */
 import cliente1 from "../assets/img/Clientes/Cliente1.png"
 import cliente2 from "../assets/img/Clientes/Cliente2.png"
@@ -261,6 +264,7 @@ export const images = {
   logo,
   cliente1,
   cliente2,
+  darioImg,
 };
 
 export const imgClientes = {
