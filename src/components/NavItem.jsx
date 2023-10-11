@@ -27,7 +27,7 @@ const NavItem = ({ item, closeNav, setLang, lang, onLanguageChange }) => {
   };
 
   return (
-    <li className="relative group font-body font-light text-xl md:text-sm">
+    <li className="relative group font-body font-light text-xl md:text-3xl md:pt-5 lg:pt-0 lg:text-sm">
       {/* Nav Links */}
       {item.type === "navLink" ? (
         isNotHome ? (
@@ -108,9 +108,9 @@ const NavItem = ({ item, closeNav, setLang, lang, onLanguageChange }) => {
                     } cursor-pointer transition-transform duration-300 flex justify-around items-center gap-1 bg-[#F8F8F8] text-black hover:bg-[#d6d4d4] px-4 py-2`}
                   >
                     {language.title.toUpperCase() === "ES" ? (
-                      <SpainIcon className={"w-4 h-full"} />
+                      <SpainIcon className={"w-4 md:w-8 lg:w-4 h-full"} />
                     ) : (
-                      <UkIcon className={"w-4 h-full"} />
+                      <UkIcon className={"w-4 md:w-8 lg:w-4 h-full"} />
                     )}
 
                     {language.title.toUpperCase()}

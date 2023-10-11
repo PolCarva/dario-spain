@@ -39,9 +39,9 @@ const Header = () => {
       name: currentLang.toUpperCase(),
       icon:
         currentLang === "es" ? (
-          <SpainIcon className={"w-4 h-full"}/>
+          <SpainIcon className={"w-4 md:w-8 lg:w-4 h-full"}/>
         ) : (
-          <UkIcon className={"w-4 h-full"}/>
+          <UkIcon className={"w-4 md:w-8 lg:w-4 h-full"}/>
           ),
 
       type: "dropdown",
