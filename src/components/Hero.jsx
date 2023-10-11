@@ -1,5 +1,5 @@
 import React from "react";
-import { imgDesfiles } from "../constants/images";
+import { images } from "../constants/images";
 import { FaWhatsapp } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 
@@ -42,8 +42,8 @@ const Hero = () => {
       </div>
 
       <img
-        src={imgDesfiles.desfile5}
-        alt=""
+        src={images.darioImg}
+        alt="Darío Spain"
         className="absolute w-[90%] h-full object-cover top-0 left-[25%]"
       />
 

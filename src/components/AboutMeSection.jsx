@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { images } from "../constants/images";
 import { useMediaQuery } from "react-responsive";
 
 export const AboutMeSection = () => {
@@ -14,7 +13,7 @@ export const AboutMeSection = () => {
 
   return (
     <section className="p-normalize pt-5 flex gap-5" id="about">
-      <div className="font-body flex gap-5 w-full">
+      <div className="font-body flex gap-5 w-full md:w-2/3">
         <div className="flex flex-col gap-4">
           <h2 className="text-4xl font-bold font-logo">
             {t("about-me.title")}
@@ -50,11 +49,6 @@ export const AboutMeSection = () => {
             </>
           )}
         </div>
-        <img
-          src={images.darioImg}
-          className="md:w-1/3 max-h-[70%] lg:max-h-none object-cover hidden md:inline rounded-md"
-          alt="Foto perfil darío"
-        />
       </div>
     </section>
   );
